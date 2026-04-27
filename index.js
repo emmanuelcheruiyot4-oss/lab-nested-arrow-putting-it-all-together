@@ -1,4 +1,4 @@
-const createLoginTracker = (userInfo) => {
+const createLoginTracker = (userInfo) =>{
   let attemptCount = 0;
 
   return (passwordAttempt) => {
@@ -11,13 +11,14 @@ const createLoginTracker = (userInfo) => {
     if (passwordAttempt === userInfo.password) {
       return "Login successful";
     }
-    return `Attempt ${attemptCount}: Login failed`;
-  };
-};
+    return `Attempt ${attemptCount}: Login failed`
+  }
+}
 
 module.exports = {
   ...(typeof createLoginTracker !== 'undefined' && { createLoginTracker })
-};
+}
+
 
 
 
